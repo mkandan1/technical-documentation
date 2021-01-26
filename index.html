@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <!-- Navigation code starting here-->
+    <div id="nav-container">
+        <div id="navbar-container">
+            <nav id="navbar">
+                <header>JS Documentation</header>
+                <!--Adding Menu-->
+                <ul>
+                    <li><a class="nav-link" href="#introduction">Introduction</a></li>
+                    <li><a href="#array" class="nav-link">Array</a></li>
+                    <li><a href="#ArrayBuffer" class="nav-link">ArrayBuffer</a></li>
+                    <li><a href="#Classes" class="nav-link">Classes</a></li>
+                    <li><a href="#Boolean" class="nav-link">Boolean</a></li>
+                    <li><a href="#Symbol" class="nav-link">Symbol</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--Navigation content ended here -->
+
+    <!--Main content starting here -->
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <p>JavaScript is a programming language commonly used in web development.
+               It was originally developed by Netscape as a means to add dynamic and interactive elements to websites. 
+               While JavaScript is influenced by <a href="https://techterms.com/definition/java"> Java</a>, the syntax 
+               is more similar to <a href="https://techterms.com/definition/cplusplus"> C</a> and is based on ECMAScript, 
+               a scripting language developed by Sun Microsystems.
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        JavaScript is a client-side scripting language, 
+                which means the source code is processed by the client's web browser rather than on the web server. 
+                This means JavaScript functions can run after a webpage has loaded without communicating with the server. 
+                For example, a JavaScript function may check a web form before it is submitted to make sure all the required 
+                fields have been filled out. The JavaScript code can produce an error message before any information is actually 
+                transmitted to the server.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        Like server-side scripting languages, such as <a href="https://techterms.com/definition/php"> PHP</a> and 
+                <a href="https://techterms.com/definition/asp"> ASP</a>, JavaScript code can be inserted anywhere within the 
+                HTML of a webpage. However, only the output of server-side code is displayed in the HTML, while JavaScript code 
+                remains fully visible in the source of the webpage. It can also be referenced in a separate .JS file, which may also 
+                be viewed in a browser.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Below is an example of a basic JavaScript function that adds two numbers. The function is called with the parameters 
+                7 and 11. If the code below were included in the HTML of a webpage, it would display the text "18" in an 
+                <a href="https://techterms.com/definition/alertbox"> alert box</a>.
+                <p>
+                <code>
+                    function sum(a,b)
+                    {
+                        return a + b;
+                    }
+                        var total = sum(7,11);
+                        alert(total);
+                </code>
+                </p>
+            </p>
+
+        </section>
+        <section class="main-section" id="array">
+            <header>Array</header>
+            <p>
+                The <strong>object</strong> lets you store multiple values in a single variable. It stores a fixed-size sequential 
+                collection of elements of the same type. An array is used to store a collection of data, but it is often 
+                more useful to think of an array as a collection of variables of the same type.
+            </p>
+            <p>
+                Use the following syntax to create an Array object −
+                <p>
+                    <code>
+                        var fruits = new Array( "apple", "orange", "mango" );
+                    </code>
+                </p>
+            </p>
+            <p>
+               <ul>
+                   <li>
+                    The <b>Array</b> parameter is a list of strings or integers. When you specify a single numeric parameter 
+                    with the Array constructor, you specify the initial length of the array. The maximum length allowed 
+                    for an array is 4,294,967,295.
+                   </li>
+               </ul>
+            </p>
+            <p>
+                
+            </p>
+
+        </section>
+        <section class="main-section" id="ArrayBuffer">
+            <header>ArrayBuffer</header>
+            <p>
+                The <code id="code-1"> ArrayBuffer</code> object is used to represent a generic, fixed-length raw binary data buffer.
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        It is an array of bytes, often referred to in other languages as a "byte array".You cannot directly manipulate the 
+                contents of an <code id="code-1"> ArrayBuffer</code>; instead, you create one of the 
+                <a href="https://devdocs.io/javascript/global_objects/typedarray"> typed array objects</a> or a 
+                <a href="https://devdocs.io/javascript/global_objects/dataview"> DataView</a> object which represents 
+                the buffer in a specific format, and use that to read and write the contents of the buffer.
+                    </li>
+                </ul>
+            </p>
+            <p>
+               <ul>
+                   <li>
+                    The <code id="code-2"> ArrayBuffer()</code> constructor creates a new <code id="code-1"> ArrayBuffer</code> of the given length in bytes. You can also get an array 
+                    buffer from existing data, <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix_to_Solution_1_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer"> 
+                    for example from a Base64 string</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsArrayBuffer"> from a local file.</a>
+                   </li>
+               </ul>
+            </p>
+            <p>
+                <p>
+                <code>
+                    const buffer = new ArrayBuffer(8);
+                    const view = new Int32Array(buffer);
+                </code>
+                </p>
+            </p>
+        </section>
+        <section class="main-section" id="Classes">
+            <header>Classes</header>
+            <p>
+                Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes 
+                in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 classalike 
+                semantics.
+            </p>
+            <p>
+                Classes are in fact "special <a href="https://devdocs.io/javascript/functions"> functions</a>", and just as you can define 
+           <a href="https://devdocs.io/javascript/operators/function"> function expressions</a> and 
+           <a href="https://devdocs.io/javascript/statements/function"> function declarations</a>, the class syntax has two components: 
+           <a href="https://devdocs.io/javascript/operators/class"> class expressions</a> and
+           <a href="https://devdocs.io/javascript/statements/class"> class declarations</a>.
+            </p>
+            <p>
+                <p>
+                <code>
+                    class Rectangle {
+                        constructor(height, width) {
+                          this.height = height;
+                          this.width = width;
+                        }
+                      }
+                </code>
+                </p>
+            </p>
+        </section>
+        <section class="main-section" id="Boolean">
+            <header>Boolean</header>
+            <p>
+                The <code id="code-1">Boolean</code> object is an object wrapper for a boolean value.
+            </p>
+            <p>
+                The value passed as the first parameter is converted to a 
+                boolean value, if necessary. If the value is omitted or is 
+                <code id="code-1"> 0</code>, <code id="code-1">-0</code>, null, <code id="code-1"> false</code>, 
+                NaN, undefined, or the empty string <code id="code-1"> ("")</code>, 
+                the object has an initial value of <code id="code-1"> false</code>. All other values, 
+                including any object, an empty array  ([])</code>, or the string "<code id="code-1"> false</code>", 
+                create an object with an initial value of <code id="code-1"> true</code>.
+            </p>
+            <p>
+                <p>
+                <code>
+                    var x = new Boolean(false);
+                        if (x) {
+                         // this code is executed
+                        }
+                </code>
+                </p>
+            </p>
+        </section>
+        <section class="main-section" id="Symbol">
+            <header>Symbol</header>
+            <p>
+                The data type <b> symbol</b> is a <a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive"> primitive data</a> type. 
+                The <code id="code-1"> Symbol()</code> function returns a value of type symbol, has static 
+                properties that expose several members of built-in objects, has 
+                static methods that expose the global symbol registry, and resembles 
+                a built-in object class, but is incomplete as a constructor because it 
+                does not support the syntax "<code id="code-1"> new Symbol()</code>".
+            </p>
+            <p>
+                Every symbol value returned from <code id="code-1"> Symbol()</code> is unique. A symbol value 
+                may be used as an identifier for object properties; this is the data 
+                type's primary purpose, although other use-cases exist, such as enabling 
+                opaque data types, or serving as an implementation-supported unique 
+                identifier in general. Some further explanation about purpose and 
+                usage can be found in the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Symbol"> glossary entry</a> for Symbol.
+            </p>
+            <p>
+                To create a new primitive symbol, you write <code id="code-1"> Symbol()</code> with an optional string as its description:
+            </p>
+            <p>
+                <p>
+                <code>
+                    let sym1 = Symbol()
+                    let sym2 = Symbol('foo')
+                    let sym3 = Symbol('foo')
+                </code>
+                </p>
+            </p>
+        </section>
+
+        <!---This is footer section-->
+
+        <footer>
+            Made by <a href="https://github.com/mkandan1"> Mani Kandan<sup>Github</sup></a> (India)
+        </footer>
+
+        <!--The footer section ended-->
+    </main>
+    <!-- Main content ended here -->
+</body>
+</html>
